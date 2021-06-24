@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Start</title>
+    <link rel="stylesheet" href="/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/logo.png" rel="apple-touch-icon">
+    <link rel="apple-touch-startup-image" href="/logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style media="screen">
+      .most_watched_video {
+        width: 100vw;
+        height: 20vw;
+      }
+    </style>
+  </head>
+    <body class="w3-green">
+    <div class="w3-bar w3-white w3-display-container">
+      <span class="w3-large">Welkom, <span id="person"></span></span>
+      <a href="/webshop.html" class="w3-right w3-button">Webshop</a>
+    </div>
+
+    <div class="w3-display-middle w3-white">
+      <div class="most_watched_video w3-section w3-container">
+        <p class="w3-display-middle">MEEST BEKEKEN VIDEO</p>
+      </div>
+      <div class="w3-bar">
+        <p class="w3-center">NIEUWS</p>
+      </div>
+    </div>
+
+    <footer class="w3-bottom w3-bar w3-white">
+      <a class="w3-left w3-button" href="/docu.html">Documentaires</a>
+      <button class="w3-right w3-button" disabled>Instellingen</button>
+      <div class="w3-center">
+        <a class="w3-button" href="/cam_select.html">Webcams</a>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    document.querySelector("#person").innerText =
+      window.localStorage.getItem("name");
+  </script>
+</html>
