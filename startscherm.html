@@ -22,7 +22,8 @@
     </div>
 
     <div class="w3-display-middle w3-white">
-      <div class="most_watched_video w3-section w3-container">
+      <div class="most_watched_video w3-section w3-container"
+        onclick="go_to_webcam()">
         <p class="w3-display-middle">MEEST BEKEKEN VIDEO</p>
       </div>
       <div class="w3-bar">
@@ -41,5 +42,9 @@
   <script type="text/javascript">
     document.querySelector("#person").innerText =
       window.localStorage.getItem("name");
+
+    function go_to_webcam() {
+      window.location = "/cam_view.html";
+    }
   </script>
 </html>
