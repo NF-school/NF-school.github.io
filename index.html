@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Diergaarde Blijdorp EXTRA</title>
+    <link rel="stylesheet" href="/w3.css">
+    <link href="/logo.png" rel="apple-touch-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="w3-green">
+    <div class="w3-bar w3-white">
+      <p>INLOGGEN</p>
+    </div>
+    <br>
+    <div class="w3-container">
+      <input type="text" class="w3-input" placeholder="Username" id="usr"
+        oninput="inputChange()">
+      <input type="password" class="w3-input" placeholder="Password" id="pass"
+        oninput="inputChange()">
+
+      <div class="w3-middle">
+        <button onclick="window.location = '/startscherm.html'"
+          class="w3-button w3-white w3-round-large" id="logbtn"
+          disabled=true>Log in</button>
+        <br>
+        <a href="#"
+          class="w3-button w3-white w3-round-large">Abbonoment</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function inputChange() {
+      storage = window.localStorage;
+
+      username = document.querySelector("#usr").value;
+      pass = document.querySelector("#pass").value;
+
+      if (pass == "0123456789") {
+        window.location = "/snake.html";
+        return;
+      }
+
+      storage.setItem("name", username);
+
+      if (username.length > 0 && pass.length > 0) {
+        document.querySelector("#logbtn").removeAttribute("disabled");
+      } else {
+        document.querySelector("#logbtn").setAttribute("disabled", true);
+      }
+    }
+  </script>
+</html>
