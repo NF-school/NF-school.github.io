@@ -1,0 +1,7 @@
+{
+  "name": "Diergaarde Blijdorp Extra",
+  "short_name": "DB Extra",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}
