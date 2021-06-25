@@ -3,5 +3,12 @@
   "short_name": "DB Extra",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/"
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ]
 }
